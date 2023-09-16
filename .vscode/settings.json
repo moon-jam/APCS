@@ -21,6 +21,12 @@
         "valarray": "cpp",
         "vector": "cpp",
         "__locale": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "chrono": "cpp",
+        "limits": "cpp",
+        "ratio": "cpp",
+        "algorithm": "cpp",
+        "__node_handle": "cpp",
+        "type_traits": "cpp"
     }
 }

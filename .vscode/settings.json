@@ -27,6 +27,14 @@
         "ratio": "cpp",
         "algorithm": "cpp",
         "__node_handle": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "istream": "cpp",
+        "atomic": "cpp",
+        "filesystem": "cpp",
+        "forward_list": "cpp",
+        "ios": "cpp",
+        "system_error": "cpp",
+        "__bit_reference": "cpp",
+        "iosfwd": "cpp"
     }
 }

@@ -1,4 +1,5 @@
-//https://zerojudge.tw/ShowProblem?problemid=b966
+// https://zerojudge.tw/ShowProblem?problemid=b966
+// https://zerojudge.tw/ShowProblem?problemid=f855
 #include <bits/stdc++.h>
 #define pii pair<int, int>
 #define l first

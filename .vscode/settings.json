@@ -35,6 +35,8 @@
         "ios": "cpp",
         "system_error": "cpp",
         "__bit_reference": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "tuple": "cpp",
+        "complex": "cpp"
     }
 }

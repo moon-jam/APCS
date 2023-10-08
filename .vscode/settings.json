@@ -37,6 +37,16 @@
         "__bit_reference": "cpp",
         "iosfwd": "cpp",
         "tuple": "cpp",
-        "complex": "cpp"
+        "complex": "cpp",
+        "__mutex_base": "cpp",
+        "fstream": "cpp",
+        "future": "cpp",
+        "optional": "cpp",
+        "ostream": "cpp",
+        "shared_mutex": "cpp",
+        "sstream": "cpp",
+        "streambuf": "cpp",
+        "thread": "cpp",
+        "variant": "cpp"
     }
 }

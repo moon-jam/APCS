@@ -48,6 +48,10 @@
         "streambuf": "cpp",
         "thread": "cpp",
         "variant": "cpp",
+<<<<<<< HEAD
         "utility": "cpp"
+=======
+        "functional": "cpp"
+>>>>>>> ee1cb6f02f60a3f7efdc53800eb3f0dcad591679
     }
 }

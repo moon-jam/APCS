@@ -47,6 +47,7 @@
         "sstream": "cpp",
         "streambuf": "cpp",
         "thread": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "functional": "cpp"
     }
 }

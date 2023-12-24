@@ -38,24 +38,43 @@ bool dfs(int p, int draw){
     return ok;
 }
 
+vii con[10004];
+mii bye;
+int x, y, p, k;
+
+bool isok(int to){
+    mii time;
+    bool ok = true;
+    rep(i, 1, to){
+        if(!bye[i])
+            for(pii j : con[i]){
+                g[j.F].eb(j.S), g[j.S].eb(j.F);
+                time[j.F]++, time[j.S]++;
+            }
+    }
+    memset(color, 0, sizeof(color));
+    rep(i, 0, n-1) ok = ok && dfs(i, 1);
+    for(auto &i : time)
+        while(i.S) g[i.F].pob(), i.S--;
+    return ok;
+}
+
 signed main() {
     ios;
-    int x, y, p, k;
     cin >> n >> m;
     rep(i, 1, m) cin >> x >> y, g[x].eb(y), g[y].eb(x);
     cin >> p >> k;
-    rep(i, 1, p){
-        mii time;
-        bool ok = true;
-        rep(i, 1, k){
-            cin >> x >> y, g[x].eb(y), g[y].eb(x);
-            time[x]++, time[y]++;
-        }
-        memset(color, 0, sizeof(color));
-        rep(i, 0, n-1) ok = ok && dfs(i, 1);
-        if(!ok) cout << i << '\n';
-        for(auto &i : time)
-            while(i.S) g[i.F].pob(), i.S--;
+    rep(i, 1, p)
+        rep(j, 1, k)
+            cin >> x >> y, con[i].eb(x,y);
+    rep(i, 1, 3){
+        int l = 1, r = p;
+        while(r>l){
+            int mid = (l+r)/2;
+            if(isok(mid)) l=mid+1;
+            else r=mid;
+        }if(l!=p) cout << l << '\n', bye[l]++;
+        else if(!isok(l)) {cout << l << '\n'; break;}
     }
     return 0;
 }

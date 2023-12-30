@@ -23,10 +23,26 @@ using namespace std;
 #define sp << " " <<
 #define ios ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)
 
+vi arr, pre;
+vii mm;
 
+int solve(int l, int r){
+    if(l==r) return arr[l];
+    int m = mm.back().S;
+    while(m<l || m>r) mm.pob(), m = mm.back().S;
+    if(pre[r]-pre[m]>=(m>0? pre[m-1] : 0)-(l>0? pre[l-1] : 0)) return solve(m+1, r);
+    else return solve(l, m-1);
+}
 
 signed main() {
     ios;
-    cout << (int)'A' sp (int)'a' sp (char)('a'-1);
+    int n;
+    cin >> n;
+    arr.resize(n), pre.resize(n);
+    for(int &i : arr) cin >> i;
+    pre[0]=arr[0]; mm.eb(arr[0], 0);
+    rep(i, 1, n-1) pre[i]=pre[i-1]+arr[i], mm.eb(arr[i], i);
+    sort(rall(mm));
+    cout << solve(0, n-1) << '\n';
     return 0;
 }

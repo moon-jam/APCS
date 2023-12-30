@@ -52,7 +52,8 @@
       "xstring": "cpp",
       "xiosbase": "cpp",
       "xlocale": "cpp",
-      "xutility": "cpp"
+      "xutility": "cpp",
+      "functional": "cpp"
     },
     "cph.general.defaultLanguage": "",
     "cph.language.cpp.Command": "g++",
